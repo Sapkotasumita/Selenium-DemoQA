@@ -14,14 +14,12 @@ driver.maximize_window()
 driver.get("https://demoqa.com/webtables")
 wait = WebDriverWait(driver, 10)
 
-# -----------------------------
+
 #  Click Add
-# -----------------------------
 wait.until(EC.element_to_be_clickable((By.ID, "addNewRecordButton"))).click()
 
-# -----------------------------
 #  Fill form and submit
-# -----------------------------
+
 wait.until(EC.visibility_of_element_located((By.ID, "firstName"))).send_keys("QA")
 driver.find_element(By.ID, "lastName").send_keys("Tester")
 driver.find_element(By.ID, "userEmail").send_keys("qa@test.com")
@@ -41,9 +39,7 @@ print(" Record added successfully")
 
 time.sleep(2)
 
-# -----------------------------
 # Verify record exists
-# -----------------------------
 rows = driver.find_elements(By.XPATH, "//div[@class='rt-tbody']/div")
 found = False
 for row in rows:
@@ -53,9 +49,9 @@ for row in rows:
         break
 assert found, "Record not found in table"
 
-# -----------------------------
+
 # Delete record
-# -----------------------------
+
 delete_btn = driver.find_element(By.XPATH, "//span[@title='Delete']")
 driver.execute_script("arguments[0].click();", delete_btn)
 
