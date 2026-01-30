@@ -1,7 +1,7 @@
 Selenium DemoQA Automation (Python)
 Project Description
 This project contains Selenium automation scripts written in Python to test different features of the DemoQA website.
-It is created for learning and practicing UI automation testing on a real demo application.
+It is created for learning and practicing UI automation testing on a real demo applicationfor automation testing.
 
 Website Tested
 https://demoqa.com/
