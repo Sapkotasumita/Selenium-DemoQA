@@ -48,4 +48,4 @@ Run any test file
 python Textbox.py
 
 Screenshots:
-Screenshots are saved in separate folders during test execution for validation.
+Screenshots are saved in separate folders during test execution for validation and debugging.
